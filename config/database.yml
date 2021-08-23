@@ -23,13 +23,15 @@ default: &default
 
 development:
   <<: *default
-  database: SurveyCraft_development
+  database: <%= ENV['DATABASE_DEV'] %>
+  #database: SurveyCraft_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
   #username: SurveyCraft
+  username: <%= ENV['DATABASE_USER_DEV'] %>
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +59,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: SurveyCraft_test
+  database: <%= ENV['DATABASE_TEST'] %>
+  #database: SurveyCraft_test
+  username: <%= ENV['DATABASE_USER_TEST'] %>
+  password: <%= ENV['DATABASE_PASSWORD_TEST'] %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +86,9 @@ test:
 #
 production:
   <<: *default
-  database: SurveyCraft_production
-  username: SurveyCraft
-  password: <%= ENV['SURVEYCRAFT_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DATABASE_PROD'] %>
+  #database: SurveyCraft_production
+  username: <%= ENV['DATABASE_USER_PROD'] %>
+  #username: SurveyCraft
+  password: <%= ENV['DATABASE_PASSWORD_PROD'] %>
+  #password: <%= ENV['SURVEYCRAFT_DATABASE_PASSWORD'] %>
