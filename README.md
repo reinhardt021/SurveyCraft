@@ -5,6 +5,9 @@
 
 [![codecov](https://codecov.io/gh/reinhardtcgr/SurveyCraft/branch/main/graph/badge.svg?token=X59G4DAHFB)](https://codecov.io/gh/reinhardtcgr/SurveyCraft) CodeCov
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/96d38a8f8b3a7f8404ad/maintainability)](https://codeclimate.com/github/reinhardtcgr/SurveyCraft/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/96d38a8f8b3a7f8404ad/test_coverage)](https://codeclimate.com/github/reinhardtcgr/SurveyCraft/test_coverage)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 But I will probably just fill it in with what I can recall.. if anything :D
