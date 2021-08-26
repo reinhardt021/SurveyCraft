@@ -52,3 +52,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # making it to have private environment variables
 gem 'dotenv-rails'
+
+gem 'simplecov', require: false, group: :test
