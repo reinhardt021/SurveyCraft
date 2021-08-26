@@ -1,7 +1,7 @@
 # SURVEY CRAFT
-
-master branch: 
+ 
 [![Build Status](https://app.travis-ci.com/reinhardtcgr/SurveyCraft.svg?token=uvvdmzf7PxXcmYJBwppm&branch=main)](https://app.travis-ci.com/reinhardtcgr/SurveyCraft)
+ master🌳
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
