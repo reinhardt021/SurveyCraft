@@ -1,7 +1,9 @@
 # SURVEY CRAFT
  
 [![Build Status](https://app.travis-ci.com/reinhardtcgr/SurveyCraft.svg?token=uvvdmzf7PxXcmYJBwppm&branch=main)](https://app.travis-ci.com/reinhardtcgr/SurveyCraft)
- master🌳
+ TravisCI: main🌳
+
+[![codecov](https://codecov.io/gh/reinhardtcgr/SurveyCraft/branch/main/graph/badge.svg?token=X59G4DAHFB)](https://codecov.io/gh/reinhardtcgr/SurveyCraft) CodeCov
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

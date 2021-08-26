@@ -19,6 +19,9 @@ SimpleCov.start 'rails'
 # TODO: add profiles and groups for when you have tests for Controllers vs Models and other things
 # see: https://github.com/simplecov-ruby/simplecov
 
+require 'codecov'
+SimpleCov.formatter = SimpleCov::Formatter::Codecov
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
