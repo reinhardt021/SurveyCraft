@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const app = new App({
     target: document.body,
     props: {
-      name: 'Svelte'
+      surveyName: 'Where do we begin?',
+      question: '',
     }
   });
 
