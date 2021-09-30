@@ -5,7 +5,7 @@
 
 <style>
   h1 {
-    color: #800080;
+    color: #5f0087;
   }
 
   .question {
@@ -13,7 +13,7 @@
   }
 </style>
 
-<h1>Hello {surveyName}!</h1>
+<h1>Survey: {surveyName}</h1>
 <form>
     <div class="question">
         <span>
@@ -21,7 +21,7 @@
         </span>
     </div>
     <div>
-        <textarea placeholder="Answer..." disabled={question !== ''}>
+        <textarea  disabled={question !== ''} placeholder="Answer...">
         </textarea>
     </div>
 </form>

@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
-  def index
+  def create
+    @survey = Survey.new()
   end
 end
