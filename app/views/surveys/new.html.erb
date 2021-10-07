@@ -1,6 +1,12 @@
-<h1>New Survey</h1>
+<h1>Let's Create a New Survey</h1>
 <%= form_for @survey do | f | %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit %>
+  <div>
+    <%= f.label :name %>
+  </div>
+  <div>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
 <% end %>
