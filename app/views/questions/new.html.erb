@@ -11,6 +11,12 @@
 <% end %>
 
 <h2>Add a Question:</h2>
+<% flash.each do |type, message| %>
+  <div><%= message %></div>
+<% end %>
+<% @question.errors.full_messages.each do |message| %>
+  <div><%= message %></div>
+<% end %>
 <%= form_with(model: [@survey, @question]) do |f| %>
   <div><%= f.label :question %></div>
   <div><%= f.text_field :question %></div>
