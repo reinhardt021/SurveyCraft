@@ -11,10 +11,10 @@
 <% end %>
 
 <h2>Add a Question:</h2>
-<%#<%= form_with(model: @question) do |f| %>%>
-  <%#<%= f.label :question %>%>
-  <%#<%= f.text_field :question %>%>
-  <%#<%= f.submit %>%>
-<%#<% end %>%>
+<%= form_with(model: [@survey, @question]) do |f| %>
+  <div><%= f.label :question %></div>
+  <div><%= f.text_field :question %></div>
+  <div><%= f.submit %></div>
+<% end %>
 
 
