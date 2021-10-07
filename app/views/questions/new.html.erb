@@ -1,0 +1,20 @@
+<h1>Survey: <%= @survey.name %></h1>
+<h2>Questions:</h2>
+<% if @questions.count == 0 %>
+  <p>This survey needs questions!!!</p>
+<% else %>
+  <ul>
+    <%= @questions.each do |question| %>
+      <li><%= question.question %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h2>Add a Question:</h2>
+<%#<%= form_with(model: @question) do |f| %>%>
+  <%#<%= f.label :question %>%>
+  <%#<%= f.text_field :question %>%>
+  <%#<%= f.submit %>%>
+<%#<% end %>%>
+
+
