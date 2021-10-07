@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  root 'surveys#new'
   get 'welcome/index'
 
   resources :surveys, only: [:new, :create, :show] do
