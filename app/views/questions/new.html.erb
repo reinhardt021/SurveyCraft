@@ -1,4 +1,7 @@
 <h1>Survey: <%= @survey.name %></h1>
+<div>
+  <%= link_to "Go to Survey", survey_path(@survey) %>
+</div>
 <h2>Questions:</h2>
 <% if @questions.count == 0 %>
   <p>This survey needs questions!!!</p>
