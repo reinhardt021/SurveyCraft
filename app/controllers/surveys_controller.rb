@@ -4,7 +4,15 @@ class SurveysController < ApplicationController
   end
 
   def create
-    Survey.create(survey_params)
+    @survey = Survey.new(survey_params)
+    if @survey.save
+      redirect_to @survey
+    end
+  end
+
+  def show
+    @survey = Survey.find(params[:id])
+    # // TODO
   end
 
   private
