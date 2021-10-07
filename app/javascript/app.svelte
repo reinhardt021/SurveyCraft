@@ -1,5 +1,5 @@
 <script>
-  export let surveyName;
+  export let name;
   export let question;
 </script>
 
@@ -13,7 +13,7 @@
   }
 </style>
 
-<h1>Survey: {surveyName}</h1>
+<h1>Survey: {name}</h1>
 <form>
     <div class="question">
         <span>
