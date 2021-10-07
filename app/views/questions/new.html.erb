@@ -3,11 +3,13 @@
 <% if @questions.count == 0 %>
   <p>This survey needs questions!!!</p>
 <% else %>
-  <ul>
-    <%= @questions.each do |question| %>
-      <li><%= question.question %></li>
+  <ol>
+    <% @questions.each do |question| %>
+      <% if question.id %>
+        <li><%= question.question %>?</li>
+      <% end %>
     <% end %>
-  </ul>
+  </ol>
 <% end %>
 
 <h2>Add a Question:</h2>
