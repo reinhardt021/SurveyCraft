@@ -6,13 +6,13 @@ class SurveysController < ApplicationController
   def create
     @survey = Survey.new(survey_params)
     if @survey.save
-      redirect_to @survey
+      redirect_to new_survey_question_path(@survey)
     end
   end
 
   def show
     @survey = Survey.find(params[:id])
-    # // TODO
+    # // TODO should grab the Survey that will be shown to a user to fill out the answers
   end
 
   private
