@@ -7,8 +7,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.new(question_params)
-    @survey.questions << @question
+    @question = @survey.questions.build(question_params)
     if @question.save
       @question = @survey.questions.build
       redirect_to action: "new"
