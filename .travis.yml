@@ -1,7 +1,4 @@
 language: ruby
-
-script: bundle exec rake
-
-rvm: 
-  - 3.0.2
+script: 
+  - bundle exec rake
 

@@ -40,3 +40,6 @@ yarn-debug.log*
 .env
 coverage/
 
+#Will have my test SQL files here just for local CLI use
+*.sql
+
