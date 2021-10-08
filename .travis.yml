@@ -1,8 +1,4 @@
 language: ruby
-rvm: 
-  - 3.0.2
-install:
-  - bundle install
 script: 
   - bundle exec rake
 
