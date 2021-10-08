@@ -12,7 +12,7 @@ This README would normally document whatever steps are necessary to get the
 application up and running.
 But I will probably just fill it in with what I can recall.. if anything :D
 
-Things you may want to cover:
+SETUP local build:
 
 * Ruby version
   * ruby '3.0.2'
@@ -20,17 +20,27 @@ Things you may want to cover:
   * need to create .env file from .env.example
 * Configuration
 * Database creation
-  * psql postgres
+  * `psql postgres`
     * // to see users aka roles
-    * \du 
+        * `\du`  or `\du+` to see more information
     * // to create the needed users to create the database
-    * create role surveycraft with createdb login password '<password>';
+        * `create role surveycraft with createdb login password '<password>';`
+    * // to list all the databases
+        * `\l` or `\l+` to see more information
+    * // to change the database
+        * `\c <database_name>`
+    * // to see all the tables in the database
+        * `\dt` OR `\dt+` to see more information
 * Database initialization
-  * rails db:setup
+  * `rails db:setup`
+* To run the app on your local machine:
+  * `rails server` 
 * How to run the test suite
+    * ... TODO:
 * Services (job queues, cache servers, search engines, etc.)
 * Deployment instructions
   * TravisCI
   * CodeCov
     * to validate Repository YAML: `curl --data-binary @codecov.yml https://codecov.io/validate`
 * ...
+
