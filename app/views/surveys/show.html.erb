@@ -1,0 +1,15 @@
+<h1>Survey: <%= @survey.name %></h1>
+<h2>Questions:</h2>
+<% if @survey.questions.count == 0 %>
+  <p>This survey needs questions!!!</p>
+<% else %>
+  <ol>
+    <% @survey.questions.each do |question| %>
+      <% if question.id %>
+        <li><%= question.question %>?</li>
+      <% end %>
+    <% end %>
+  </ol>
+<% end %>
+
+
