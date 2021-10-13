@@ -55,3 +55,5 @@ gem 'dotenv-rails'
 
 gem 'simplecov', require: false, group: :test
 gem 'codecov', :require => false, :group => :test
+
+gem 'securerandom'

@@ -1,15 +1,36 @@
 <h1>Survey: <%= @survey.name %></h1>
+<p> <%= @uuid %> </p>
 <h2>Questions:</h2>
+
 <% if @survey.questions.count == 0 %>
   <p>This survey needs questions!!!</p>
 <% else %>
-  <ol>
+
+  <%= form_with(url: survey_answers_path(@survey), method: :post) do |survey_form| %>
+
     <% @survey.questions.each do |question| %>
-      <% if question.id %>
-        <li><%= question.question %>?</li>
+
+      <div><%= question.question %>?</div>
+      <%= survey_form.fields_for :questions do |question_form| %>
+        <%= question.answers.each do |answer| %>
+
+          <%= question_form.fields_for :answers do |answer_form| %>
+            <%= answer_form.text_field :answer %>
+          <% end %>
+
+        <% end %>
       <% end %>
+
+      <% if question.id %>
+        <input name="answers[question.id][question_id]" type="hidden" value=#{question.id}/>
+        <input name="answers[question_id][answer]" type="text"/>
+      <% end %>
+
     <% end %>
-  </ol>
+
+    <div><%= survey_form.submit "Submit Answers" %></div>
+  <% end %>
+
 <% end %>
 
 

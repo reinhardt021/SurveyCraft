@@ -25,4 +25,7 @@ class AnswersController < ApplicationController
     #end
   end
 
+  def survey_params
+    params.require(:survey).permit(:id, questions_attributes: [:id, answers_attributes: [:answer]])
+  end
 end

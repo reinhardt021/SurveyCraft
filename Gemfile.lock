@@ -173,6 +173,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    securerandom (0.1.0)
     semantic_range (3.0.0)
     simplecov (0.21.2)
       docile (~> 1.1)
@@ -228,6 +229,7 @@ DEPENDENCIES
   rails (~> 6.1.4, >= 6.1.4.1)
   rspec-rails (~> 5.0.0)
   sass-rails (>= 6)
+  securerandom
   simplecov
   spring
   turbolinks (~> 5)

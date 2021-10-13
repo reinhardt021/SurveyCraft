@@ -1,3 +1,5 @@
+require 'securerandom'
+
 class SurveysController < ApplicationController
   def index
     @surveys = Survey.all
