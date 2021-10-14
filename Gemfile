@@ -34,6 +34,8 @@ group :development, :test do
 
   # RSPEC for specifications and testing 
   gem 'rspec-rails', '~> 5.0.0'
+  gem 'factory_bot_rails'
+  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 end
 
 group :development do
@@ -57,3 +59,4 @@ gem 'simplecov', require: false, group: :test
 gem 'codecov', :require => false, :group => :test
 
 gem 'securerandom'
+
