@@ -1,4 +1,13 @@
 <h1>Let's Create a New Survey</h1>
+<% if @survey.errors.any? %>
+  <ul>
+    <% @survey.errors.each do |error| %>
+      <li>
+        <%= error.full_message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
 <%= form_for @survey do | f | %>
   <div><%= f.label :name %></div>
   <div><%= f.text_field :name %></div>
