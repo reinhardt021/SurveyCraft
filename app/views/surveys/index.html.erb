@@ -1,7 +1,5 @@
 <h1>SurveyCraft</h1>
 
 <% @surveys.each do |survey| %>
-  <% if survey.id %>
-    <div><%= link_to survey.name, survey_path(survey) %></div>
-  <% end %>
+  <div><%= link_to survey.name, survey_path(survey) %></div>
 <% end %>
