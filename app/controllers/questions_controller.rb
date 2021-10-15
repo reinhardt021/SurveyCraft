@@ -12,6 +12,7 @@ class QuestionsController < ApplicationController
       @question = @survey.questions.build
       redirect_to action: "new"
     else 
+      # // TODO: use render and errors of model instead of flash
       redirect_to action: "new"
       flash[:error] = "Question could not save"
     end
