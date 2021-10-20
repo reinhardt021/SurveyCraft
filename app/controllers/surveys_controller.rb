@@ -22,6 +22,11 @@ class SurveysController < ApplicationController
 
   def show
    @survey = Survey.find(params[:id])
+   @first_question = @survey.questions.first
+   # TODO: move uuid here to craete session_id
+    @session_id = SecureRandom.uuid
+   # link to start survey
+   # GET /surveys/{survey}/questions/{question}/answers/new?session_id=adsflkjadsfldjsfkd
   end
 
   private
