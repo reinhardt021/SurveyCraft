@@ -1,0 +1,9 @@
+<h1>Survey: <%= @survey.name %></h1>
+<h2><%= @question.question %>?</h2>
+<%= form_with(model: @answer, url: survey_question_answers_path(@survey, @question)) do |f| %>
+  <%= f.hidden_field :session_id, value: @answer.session_id %>
+  <div><%= f.label :answer %></div>
+  <div><%= f.text_field :answer %></div>
+  <div><%= f.submit 'Submit & go to next question' %></div>
+<% end %>
+<%# TODO: back button%>
