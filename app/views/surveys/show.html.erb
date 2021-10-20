@@ -5,27 +5,9 @@
 <% if @survey.questions.count == 0 %>
   <p>This survey needs questions!!!</p>
 <% else %>
-
-  <%#<%= form_with(url: survey_answers_path(@survey), method: :post) do |survey_form| %>
     <% @survey.questions.each do |question| %>
       <div><%= question.question %>?</div>
-      <%#<%= survey_form.fields_for :questions do |question_form| %>
-        <%#<%= question.answers.each do |answer| %>
-          <%#<%= question_form.fields_for :answers do |answer_form| %>
-            <%#<%= answer_form.text_field :answer %>
-          <%#<% end %>
-        <%#<% end %>
-      <%#<% end %>
-
-      <%#<% if question.id %>
-        <%#<input name="answers[question.id][question_id]" type="hidden" value=#{question.id}/>%>
-        <%#<input name="answers[question_id][answer]" type="text"/>%>
-      <%#<% end %>
     <% end %>
-
-    <%#<div><%= survey_form.submit "Submit Answers" %></div>
-  <%#<% end %>
-
 <% end %>
 
 <div><%= link_to "Start Survey", new_survey_question_answer_path(@survey, @first_question, session_id: @session_id) %></div>
