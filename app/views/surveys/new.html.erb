@@ -1,4 +1,4 @@
-<h1>Let's Create a New Survey</h1>
+<h1 class='block text-5xl'>Let's Create a New Survey</h1>
 <% if @survey.errors.any? %>
   <ul>
     <% @survey.errors.each do |error| %>
@@ -9,7 +9,9 @@
   </ul>
 <% end %>
 <%= form_for @survey do | f | %>
-  <div><%= f.label :name %></div>
-  <div><%= f.text_field :name %></div>
-  <div><%= f.submit %></div>
+  <div class='space-y-4'>
+    <div class='block'><%= f.label :name %></div>
+    <div class='block'><%= f.text_field(:name, class: 'border-b-2') %></div>
+    <div class='block'><%= f.submit %></div>
+  </div>
 <% end %>
