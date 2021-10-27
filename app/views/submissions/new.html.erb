@@ -10,7 +10,7 @@
           <% @submission.answers.each do |answer| %>
             <div class='block text-2xl'>
               <div class='block text-2xl'><%= answer.question.question %>?</div>
-              <%= submission_form.fields_for answer, index: answer.question_id do |question_form| %>
+              <%= submission_form.fields_for :answer, index: answer.question_id do |question_form| %>
                 <%= question_form.hidden_field :question_id %>
                 <div><%= question_form.text_field(:answer, class: 'border-b-2') %></div>
               <% end %>
