@@ -1,19 +1,25 @@
-<h1 class='block text-5xl'>Survey: <%= @survey.name %></h1>
-<div class='space-y-4'>
-  <%#<p> <%= @uuid %>
-  <h2 class='block text-3xl'>Questions:</h2>
-
+<div class='space-y-8'>
+  <h1 class='block text-5xl'>Survey: <%= @survey.name %></h1>
   <% if @survey.questions.count == 0 %>
     <p class='block text-2xl'>This survey needs questions!!!</p>
+
   <% else %>
-      <%= form_with url: survey_submissions_path(@survey) do |submission_form| %>
-          <% @survey.questions.each do |question| %>
-              <div class='block text-2xl'><%= question.question %>?</div>
-              <div><%= submission_form.label :answer %></div>
-              <div><%= submission_form.text_field :answer %></div>
+    <%= form_with model: @submission, url: survey_submissions_path(@survey) do |submission_form| %>
+
+        <div class='space-y-4'>
+          <% @submission.answers.each do |answer| %>
+            <div class='block text-2xl'>
+              <div class='block text-2xl'><%= answer.question.question %>?</div>
+              <%= submission_form.fields_for answer, index: answer.question_id do |question_form| %>
+                <%= question_form.hidden_field :question_id %>
+                <div><%= question_form.text_field(:answer, class: 'border-b-2') %></div>
+              <% end %>
+            </div>
           <% end %>
           <div><%= submission_form.submit('Submit', { class: 'bg-indigo-500 rounded-full py-3 px-6' }) %></div>
-      <% end %>
+        </div>
+
+    <% end %>
   <% end %>
 
 </div>

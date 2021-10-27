@@ -1,15 +1,17 @@
 class SubmissionsController < ApplicationController
   def new 
     @survey = Survey.find(params[:survey_id])
-    #@submission = @survey.submissions.build
+    @submission = @survey.submissions.build
+    @survey.questions.each do |question|
+      @submission.answers.build(question_id: question.id)
+    end
   end
+  # TODO: Test Driven Design  = WRITE TESTS
+
   def create
-    # TODO: Test Driven Design  = WRITE TESTS
-    #
-    # TODO: error out if there aren't any session_id
     puts '>>> SubmissionsController'
     puts params
-    @question = Question.find(params[:question_id])
+    @survey = Survey.find(params[:survey_id])
     @answer = @question.answers.build(answer_params)
     #if @answer.save
       # TODO: redirect to the next question
