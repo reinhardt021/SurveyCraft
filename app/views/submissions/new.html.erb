@@ -1,0 +1,21 @@
+<h1 class='block text-5xl'>Survey: <%= @survey.name %></h1>
+<div class='space-y-4'>
+  <%#<p> <%= @uuid %>
+  <h2 class='block text-3xl'>Questions:</h2>
+
+  <% if @survey.questions.count == 0 %>
+    <p class='block text-2xl'>This survey needs questions!!!</p>
+  <% else %>
+      <%= form_with url: survey_submissions_path(@survey) do |submission_form| %>
+          <% @survey.questions.each do |question| %>
+              <div class='block text-2xl'><%= question.question %>?</div>
+              <div><%= submission_form.label :answer %></div>
+              <div><%= submission_form.text_field :answer %></div>
+          <% end %>
+          <div><%= submission_form.submit('Submit', { class: 'bg-indigo-500 rounded-full py-3 px-6' }) %></div>
+      <% end %>
+  <% end %>
+
+</div>
+
+
