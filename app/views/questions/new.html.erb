@@ -1,11 +1,13 @@
 <div class='space-y-8'>
   <h1 class='block text-5xl'>Survey: <%= @survey.name %></h1>
   <div class='block'><%= link_to "Go to Survey", survey_path(@survey), class: "bg-gray-500 rounded-full py-3 px-6" %></div>
-  <% if @questions.count == 0 %>
+
+  <% if @survey.questions.count == 0 %>
     <p class='block'>This survey needs questions!!!</p>
+
   <% else %>
     <ol class='block'>
-      <% @questions.each do |question| %>
+      <% @survey.questions.each do |question| %>
         <% if question.id %>
           <li><%= question.question %>?</li>
         <% end %>
@@ -13,17 +15,16 @@
     </ol>
   <% end %>
 
-  <% flash.each do |type, message| %>
-    <div class='block'><%= message %></div>
-  <% end %>
-  <% @question.errors.full_messages.each do |message| %>
-    <div class='block'><%= message %></div>
-  <% end %>
-
   <%= form_with(model: [@survey, @question]) do |f| %>
     <div class='space-y-4'>
       <div class='block'><%= f.label :question, 'What question do you want to ask?' %></div>
       <div class='block'><%= f.text_field :question, class: 'border-b-2' %></div>
+      <% if @question.errors.any? %>
+        <% @question.errors.full_messages.each do |message| %>
+          <div class='block text-red-500'><%= message %></div>
+        <% end %>
+      <% end %>
+
       <div class='block'><%= f.submit('Add Question', { class: 'bg-indigo-500 rounded-full py-3 px-6' }) %></div>
     </div>
   <% end %>
