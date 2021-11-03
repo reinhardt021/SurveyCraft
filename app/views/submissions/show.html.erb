@@ -1,0 +1,13 @@
+<div class='space-y-8'>
+  <h1 class='block text-5xl'>Survey: <%= @survey.name %></h1>
+
+  <div class='space-y-4'>
+    <% @submission.answers.each do |answer| %>
+      <div class='block text-xl'><%= answer.question.question %>?</div>
+      <div class='block text-3xl'><%= answer.answer %></div>
+    <% end %>
+  </div>
+
+</div>
+
+
