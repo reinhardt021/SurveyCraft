@@ -14,8 +14,6 @@ class SubmissionsController < ApplicationController
     if @submission.save
       redirect_to survey_submission_path(@survey, @submission)
     else 
-      puts '>>> submission did not save'
-      #why is this just pushing me to http://localhost:3000/surveys/11/submissions
       render :new
     end
   end
