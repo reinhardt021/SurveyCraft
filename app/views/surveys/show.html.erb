@@ -11,9 +11,8 @@
       <% end %>
   <% end %>
 
-  <%#<div><%= link_to "Start Survey", new_survey_question_answer_path(@survey, @first_question, session_id: @session_id) %></div>
-  <div class='bg-indigo-500 rounded-md p-5'>
-    <%= link_to "Start Survey", new_survey_submission_path(@survey) =%>
+  <div>
+    <%= link_to "Start Survey", new_survey_submission_path(@survey), class: "bg-indigo-500 rounded-md p-5" =%>
   </div>
 
 </div>
