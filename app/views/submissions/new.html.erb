@@ -7,9 +7,9 @@
     <%= form_with model: @submission, url: survey_submissions_path(@survey) do |submission_form| %>
         <div class='space-y-4'>
           <%= submission_form.fields_for :answers, @submission.answers do |answer_form| %>
-            <div class='block text-2xl'><%= answer_form.hidden_field(:question_id) %></div>
-            <div class='block text-2xl'><%= answer_form.label :question, answer_form.object.question.question %>?</div>
-            <div class='block text-2xl'><%= answer_form.text_field(:answer, class: 'border-b-2') %></div>
+            <div class='block text-xl'><%= answer_form.hidden_field(:question_id) %></div>
+            <div class='block text-xl'><%= answer_form.label :question, answer_form.object.question.question %>?</div>
+            <div class='block text-3xl'><%= answer_form.text_field(:answer, class: 'border-b-2') %></div>
           <% end %>
 
           <% if @submission.errors.any? %>
