@@ -18,7 +18,6 @@ class SurveysController < ApplicationController
 
   def show
    @survey = Survey.find(params[:id])
-   @first_question = @survey.questions.first
   end
 
   private
