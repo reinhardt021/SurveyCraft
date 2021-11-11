@@ -1,6 +1,6 @@
 <div class='space-y-8'>
   <h1 class='block text-5xl'>Survey: <%= @survey.name %></h1>
-  <% if @survey.questions.count == 0 %>
+  <% if !@survey.has_questions? %>
     <p class='block text-2xl'>This survey needs questions!!!</p>
 
   <% else %>

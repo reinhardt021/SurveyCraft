@@ -2,7 +2,7 @@
   <h1 class='block text-5xl'>Survey: <%= @survey.name %></h1>
   <div class='block'><%= link_to "Go to Survey", survey_path(@survey), class: "bg-gray-500 rounded-full py-3 px-6" %></div>
 
-  <% if @survey.questions.count == 0 %>
+  <% if !@survey.has_questions? %>
     <p class='block'>This survey needs questions!!!</p>
 
   <% else %>

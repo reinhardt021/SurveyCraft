@@ -1,6 +1,6 @@
 <h1 class='block text-5xl'>Survey: <%= @survey.name %></h1>
 <div class='space-y-4'>
-  <% if @survey.questions.count == 0 %>
+  <% if !@survey.has_questions? %>
     <p class='block text-2xl'>This survey needs questions!!!</p>
     <div>
       <%= link_to "Add Questions to Survey", new_survey_question_path(@survey), class: "bg-indigo-500 rounded-full py-3 px-6" =%>
