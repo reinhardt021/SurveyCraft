@@ -32,6 +32,8 @@ SETUP local build:
   * `rails db:setup`
 * Create Migration
   * `rails generate migration CreateSurveys`
+* Run Migrations
+  * `rails db:migrate`
 * To run the app on your local machine:
   * `rails server` 
 * How to run the test suite
