@@ -1,15 +1,20 @@
-<h1>Survey: <%= @survey.name %></h1>
-<h2>Questions:</h2>
-<% if @survey.questions.count == 0 %>
-  <p>This survey needs questions!!!</p>
-<% else %>
-  <ol>
-    <% @survey.questions.each do |question| %>
-      <% if question.id %>
-        <li><%= question.question %>?</li>
-      <% end %>
-    <% end %>
-  </ol>
-<% end %>
+<h1 class='block text-5xl'>Survey: <%= @survey.name %></h1>
+<div class='space-y-4'>
+  <% if !@survey.has_questions? %>
+    <p class='block text-2xl'>This survey needs questions!!!</p>
+    <div>
+      <%= link_to "Add Questions to Survey", new_survey_question_path(@survey), class: "bg-indigo-500 rounded-full py-3 px-6" =%>
+    </div>
 
+  <% else %>
+      <% @survey.questions.each do |question| %>
+        <div class='block text-2xl'><%= question.question %>?</div>
+      <% end %>
+      <div>
+        <%= link_to "Start Survey", new_survey_submission_path(@survey), class: "bg-indigo-500 rounded-full py-3 px-6" =%>
+      </div>
+  <% end %>
+
+
+</div>
 

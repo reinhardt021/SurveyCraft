@@ -1,5 +1,7 @@
-<h1>SurveyCraft</h1>
-
-<% @surveys.each do |survey| %>
-  <div><%= link_to survey.name, survey_path(survey) %></div>
-<% end %>
+<div class='space-y-8'>
+  <h1 class='block text-5xl'>SurveyCraft</h1>
+  <% @surveys.each do |survey| %>
+    <div class='block'><%= link_to survey.name, survey_path(survey), class: "bg-gray-500 rounded-full py-3 px-6" %></div>
+  <% end %>
+  <div class='block'><%= link_to "New", new_survey_path, class: "bg-indigo-500 rounded-full py-3 px-6" %></div>
+</div>

@@ -9,12 +9,9 @@ class QuestionsController < ApplicationController
   def create
     @question = @survey.questions.build(question_params)
     if @question.save
-      @question = @survey.questions.build
-      redirect_to action: "new"
-    else 
-      # // TODO: use render and errors of model instead of flash
-      redirect_to action: "new"
-      flash[:error] = "Question could not save"
+      redirect_to new_survey_question_path(@survey)
+    else
+      render :new 
     end
   end
 

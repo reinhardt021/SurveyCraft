@@ -33,10 +33,12 @@ SETUP local build:
         * `\dt` OR `\dt+` to see more information
 * Database initialization
   * `rails db:setup`
+* Create Migration
+  * `rails generate migration CreateSurveys`
 * To run the app on your local machine:
   * `rails server` 
 * How to run the test suite
-    * ... TODO:
+    * `$ rails spec`
 * Services (job queues, cache servers, search engines, etc.)
 * Deployment instructions
   * TravisCI

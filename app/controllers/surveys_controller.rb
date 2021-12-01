@@ -12,8 +12,6 @@ class SurveysController < ApplicationController
     if @survey.save
       redirect_to new_survey_question_path(@survey)
     else
-      #redirect_to action: "new"
-      #redirect_to new_survey_question_path(@survey)
       render :new #// better way to show errors
     end
   end
