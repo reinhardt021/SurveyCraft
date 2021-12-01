@@ -1,8 +1,5 @@
 # SURVEY CRAFT
  
-[![Build Status](https://app.travis-ci.com/reinhardtcgr/SurveyCraft.svg?token=uvvdmzf7PxXcmYJBwppm&branch=main)](https://app.travis-ci.com/reinhardtcgr/SurveyCraft)
- TravisCI: main🌳
-
 [![codecov](https://codecov.io/gh/reinhardtcgr/SurveyCraft/branch/main/graph/badge.svg?token=X59G4DAHFB)](https://codecov.io/gh/reinhardtcgr/SurveyCraft)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/96d38a8f8b3a7f8404ad/maintainability)](https://codeclimate.com/github/reinhardtcgr/SurveyCraft/maintainability)
