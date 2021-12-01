@@ -41,5 +41,9 @@ SETUP local build:
   * TravisCI
   * CodeCov
     * to validate Repository YAML: `curl --data-binary @codecov.yml https://codecov.io/validate`
+  * Heroku
+    * `git push heroku main`
+    * `heroku logs`
+    * `heroku run rails db:migrate`
 * ...
 
