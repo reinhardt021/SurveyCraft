@@ -1,8 +1,5 @@
 # SURVEY CRAFT
  
-[![Build Status](https://app.travis-ci.com/reinhardtcgr/SurveyCraft.svg?token=uvvdmzf7PxXcmYJBwppm&branch=main)](https://app.travis-ci.com/reinhardtcgr/SurveyCraft)
- TravisCI: main🌳
-
 [![codecov](https://codecov.io/gh/reinhardtcgr/SurveyCraft/branch/main/graph/badge.svg?token=X59G4DAHFB)](https://codecov.io/gh/reinhardtcgr/SurveyCraft)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/96d38a8f8b3a7f8404ad/maintainability)](https://codeclimate.com/github/reinhardtcgr/SurveyCraft/maintainability)
@@ -35,6 +32,8 @@ SETUP local build:
   * `rails db:setup`
 * Create Migration
   * `rails generate migration CreateSurveys`
+* Run Migrations
+  * `rails db:migrate`
 * To run the app on your local machine:
   * `rails server` 
 * How to run the test suite
@@ -44,5 +43,9 @@ SETUP local build:
   * TravisCI
   * CodeCov
     * to validate Repository YAML: `curl --data-binary @codecov.yml https://codecov.io/validate`
+  * Heroku
+    * `git push heroku main`
+    * `heroku logs`
+    * `heroku run rails db:migrate`
 * ...
 
