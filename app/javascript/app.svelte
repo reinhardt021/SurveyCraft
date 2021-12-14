@@ -1,27 +1,17 @@
 <script>
-  export let name;
-  export let question;
 </script>
 
 <style>
-  h1 {
-    color: #5f0087;
-  }
-
-  .question {
-    margin-bottom: 1em;
-  }
+  /*h1 {*/
+    /*color: #5f0087;*/
+  /*}*/
 </style>
 
-<h1>Survey: {name}</h1>
-<form>
-    <div class="question">
-        <span>
-            <input type=text placeholder="What is your question"/> ?
-        </span>
-    </div>
-    <div>
-        <textarea  disabled={question !== ''} placeholder="Answer...">
-        </textarea>
-    </div>
-</form>
+<div class='max-w-sm mx-auto text-center'>
+    <h1 class='block text-6xl'>🤗</h1>
+    <p class='block text-5xl text-gray-500 leading-none'>
+        <span>HEY HEY!</span>
+        <br/>
+        <span>Welcome to Survey Craft!</span>
+    </p>
+</div>
